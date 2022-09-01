@@ -32,6 +32,7 @@ conda info
 conda list
 
 echo "python==3.7.*" > $CONDA_PATH/conda-meta/pinned
+echo "conda==4.13.0" >> $CONDA_PATH/conda-meta/pinned
 conda install -y anaconda-client
 conda install -y python
 conda update -y conda
