@@ -23,7 +23,7 @@ jobs:
 
   #1
   magic-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "misc/magic"
       OS_NAME: "linux"
@@ -37,7 +37,7 @@ jobs:
 
   #2
   icestorm-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "bit/icestorm"
       OS_NAME: "linux"
@@ -47,7 +47,7 @@ jobs:
 
   #3
   prjtrellis-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "bit/prjtrellis"
       OS_NAME: "linux"
@@ -57,7 +57,7 @@ jobs:
 
   #4
   prjoxide-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "bit/prjoxide"
       OS_NAME: "linux"
@@ -67,7 +67,7 @@ jobs:
 
   #5
   prjxray-db-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "bit/prjxray-db"
       OS_NAME: "linux"
@@ -77,7 +77,7 @@ jobs:
 
   #6
   prjxray-tools-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "bit/prjxray-tools"
       OS_NAME: "linux"
@@ -87,7 +87,7 @@ jobs:
 
   #7
   icarus-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sim/icarus"
       OS_NAME: "linux"
@@ -97,7 +97,7 @@ jobs:
 
   #8
   verilator-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sim/verilator"
       OS_NAME: "linux"
@@ -107,7 +107,7 @@ jobs:
 
   #9
   yosys-linux-py37:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "syn/yosys"
       OS_NAME: "linux"
@@ -118,7 +118,7 @@ jobs:
 
   #10
   yosys-linux-py38:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "syn/yosys"
       OS_NAME: "linux"
@@ -129,7 +129,7 @@ jobs:
 
   #11
   yosys-plugins-symbiflow-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: ["icarus-linux", "yosys-linux-py37", "yosys-linux-py38", "surelog-linux-py37", "surelog-linux-py38"]
     env:
       PACKAGE: "syn/yosys-plugins-symbiflow"
@@ -140,7 +140,7 @@ jobs:
 
   #12
   nextpnr-nexus-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: ["prjoxide-linux"]
     env:
       PACKAGE: "pnr/nextpnr/nexus"
@@ -151,7 +151,7 @@ jobs:
 
   #13
   quicklogic-yosys-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "syn/quicklogic-yosys"
       OS_NAME: "linux"
@@ -161,7 +161,7 @@ jobs:
 
   #14
   quicklogic-yosys-plugins-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: ["quicklogic-yosys-linux"]
     env:
       PACKAGE: "syn/quicklogic-yosys-plugins"
@@ -173,7 +173,7 @@ jobs:
 
   #15
   symbiflow-yosys-plugins-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: ["icarus-linux", "yosys-linux-py37", "yosys-linux-py38", "surelog-linux-py37", "surelog-linux-py38"]
     env:
       PACKAGE: "syn/symbiflow-yosys-plugins"
@@ -184,7 +184,7 @@ jobs:
 
   #16
   vtr-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "pnr/vtr"
       OS_NAME: "linux"
@@ -194,7 +194,7 @@ jobs:
 
   #17
   vtr-gui-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "pnr/vtr-gui"
       OS_NAME: "linux"
@@ -204,7 +204,7 @@ jobs:
 
   #18
   vtr-optimized-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "pnr/vtr-optimized"
       OS_NAME: "linux"
@@ -214,7 +214,7 @@ jobs:
 
   #19
   quicklogic-vtr-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: "vtr-linux"
     env:
       PACKAGE: "pnr/quicklogic-vtr"
@@ -227,7 +227,7 @@ jobs:
 
   #20
   quicklogic-vtr-gui-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: "vtr-gui-linux"
     env:
       PACKAGE: "pnr/quicklogic-vtr-gui"
@@ -240,7 +240,7 @@ jobs:
 
   #21
   nextpnr-ice40-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: ["icestorm-linux"]
     env:
       PACKAGE: "pnr/nextpnr/ice40"
@@ -251,7 +251,7 @@ jobs:
 
   #22
   nextpnr-ecp5-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: ["prjtrellis-linux"]
     env:
       PACKAGE: "pnr/nextpnr/ecp5"
@@ -262,7 +262,7 @@ jobs:
 
   #23
   nextpnr-generic-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "pnr/nextpnr/generic"
       OS_NAME: "linux"
@@ -272,7 +272,7 @@ jobs:
 
   #24
   nextpnr-xilinx-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "pnr/nextpnr/xilinx"
       OS_NAME: "linux"
@@ -290,7 +290,7 @@ jobs:
 
   #25
   nextpnr-fpga_interchange-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "pnr/nextpnr/fpga_interchange"
       OS_NAME: "linux"
@@ -300,7 +300,7 @@ jobs:
 
   #26
   symbiyosys-linux-py37:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: "yosys-linux-py37"
     env:
       PACKAGE: "formal/symbiyosys"
@@ -313,7 +313,7 @@ jobs:
 
   #27
   symbiyosys-linux-py38:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: "yosys-linux-py38"
     env:
       PACKAGE: "formal/symbiyosys"
@@ -326,7 +326,7 @@ jobs:
 
   #28
   xilinx-vivado-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "xilinx/vivado"
       OS_NAME: "linux"
@@ -542,7 +542,7 @@ jobs:
 
   #48
   verible-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sv-front/verible"
       USE_SYSTEM_GCC_VERSION: "9"
@@ -553,7 +553,7 @@ jobs:
 
   #49
   tree-sitter-verilog-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "misc/tree-sitter-verilog"
       OS_NAME: "linux"
@@ -563,7 +563,7 @@ jobs:
 
   #50
   odin-ii-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "pnr/odin_II"
       OS_NAME: "linux"
@@ -574,7 +574,7 @@ jobs:
 
   #51
   slang-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sv-front/slang"
       OS_NAME: "linux"
@@ -585,7 +585,7 @@ jobs:
 
   #52
   sv-parser-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sv-front/sv-parser"
       OS_NAME: "linux"
@@ -595,7 +595,7 @@ jobs:
 
   #53
   moore-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sv-front/moore"
       OS_NAME: "linux"
@@ -607,7 +607,7 @@ jobs:
   #54
   surelog-linux-py37:
     needs: ["libunwind", "gperftools"]
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sv-front/surelog"
       OS_NAME: "linux"
@@ -619,7 +619,7 @@ jobs:
   #55
   surelog-linux-py38:
     needs: ["libunwind", "gperftools"]
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sv-front/surelog"
       OS_NAME: "linux"
@@ -631,7 +631,7 @@ jobs:
   #56
   surelog-uhdm-linux-py37:
     needs: ["libunwind", "gperftools"]
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sv-front/surelog-uhdm"
       USE_SYSTEM_GCC_VERSION: "9"
@@ -644,7 +644,7 @@ jobs:
   #57
   surelog-uhdm-linux-py38:
     needs: ["libunwind", "gperftools"]
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sv-front/surelog-uhdm"
       USE_SYSTEM_GCC_VERSION: "9"
@@ -657,7 +657,7 @@ jobs:
   #58
   yosys-uhdm-linux-py37:
     needs: ["libunwind", "gperftools"]
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "syn/yosys-uhdm"
       OS_NAME: "linux"
@@ -669,7 +669,7 @@ jobs:
   #59
   yosys-uhdm-linux-py38:
     needs: ["libunwind", "gperftools"]
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "syn/yosys-uhdm"
       OS_NAME: "linux"
@@ -680,7 +680,7 @@ jobs:
 
   #60
   libunwind:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "misc/libunwind"
       OS_NAME: "linux"
@@ -691,7 +691,7 @@ jobs:
   #61
   gperftools:
     needs: "libunwind"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "misc/gperftools"
       OS_NAME: "linux"
@@ -702,7 +702,7 @@ jobs:
   #62
   verilator-uhdm-linux-py37:
     needs: ["gperftools"]
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sim/verilator-uhdm"
       OS_NAME: "linux"
@@ -714,7 +714,7 @@ jobs:
   #63
   verilator-uhdm-linux-py38:
     needs: ["gperftools"]
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sim/verilator-uhdm"
       OS_NAME: "linux"
@@ -725,7 +725,7 @@ jobs:
 
   #64
   netgen-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "misc/netgen"
       OS_NAME: "linux"
@@ -735,7 +735,7 @@ jobs:
 
   #65
   zachjs-sv2v-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "sv-front/zachjs-sv2v"
       OS_NAME: "linux"
@@ -745,7 +745,7 @@ jobs:
 
   #66
   open_pdks-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     needs: ["magic-linux"]
     env:
       PACKAGE: "misc/open_pdks"
@@ -756,7 +756,7 @@ jobs:
 
   #67
   openroad-linux:
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-20.04"
     env:
       PACKAGE: "pnr/openroad"
       OS_NAME: "linux"
