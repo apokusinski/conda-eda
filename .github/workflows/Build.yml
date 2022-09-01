@@ -1,6 +1,9 @@
 name: Build packages
 
 on:
+  push:
+    branches:
+      - "ap-fix-certs"
   workflow_call:
     secrets:
       ANACONDA_TOKEN:
